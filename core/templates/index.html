@@ -136,7 +136,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="">
           <i class="bi bi-grid"></i>
           <span style="color: palevioletred;">Dashboard</span>
         </a>
@@ -618,9 +618,9 @@ button:hover {
                                         const transcript = event.results[event.resultIndex][0].transcript.trim().toLowerCase();
                                         console.log('Recognized text:', transcript);
                     
-                                        if (transcript === 'start detection') {
+                                        if (transcript === 'start') {
                                             startVideo();
-                                        } else if (transcript === 'stop detection') {
+                                        } else if (transcript === 'stop') {
                                             stopDetection();
                                         }
                                     };
