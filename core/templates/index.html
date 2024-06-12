@@ -1,0 +1,1433 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>visual aid</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<!-- Vendor CSS Files -->
+<link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+<link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+<link href="{% static 'vendor/quill/quill.snow.css' %}" rel="stylesheet">
+<link href="{% static 'vendor/quill/quill.bubble.css' %}" rel="stylesheet">
+<link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+<link href="{% static 'vendor/simple-datatables/style.css' %}" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+       
+        <span class="d-none d-lg-block" style="color: palevioletred;">visual aid</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+              <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <i class="bi bi-grid"></i>
+          <span style="color: palevioletred;">Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+     
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1 style="color: palevioletred; font-family: Poppins;">vision aid malawi</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" style="font-weight: bold;">computer vision</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- Left side columns -->
+        <div class="col-lg-8">
+          <div class="row">
+<img src="https://editor.analyticsvidhya.com/uploads/76746devcommunity.gif" alt="" style="border-radius: 1%;">
+
+            
+            <div class="card_c" style="margin-top: 20px;">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#verticalycentered2">
+              <div class="item item--1">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.75 12C9.75 10.7574 10.7574 9.75 12 9.75C13.2426 9.75 14.25 10.7574 14.25 12C14.25 13.2426 13.2426 14.25 12 14.25C10.7574 14.25 9.75 13.2426 9.75 12Z" fill="#1C274C"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 13.6394 2.42496 14.1915 3.27489 15.2957C4.97196 17.5004 7.81811 20 12 20C16.1819 20 19.028 17.5004 20.7251 15.2957C21.575 14.1915 22 13.6394 22 12C22 10.3606 21.575 9.80853 20.7251 8.70433C19.028 6.49956 16.1819 4 12 4C7.81811 4 4.97196 6.49956 3.27489 8.70433C2.42496 9.80853 2 10.3606 2 12ZM12 8.25C9.92893 8.25 8.25 9.92893 8.25 12C8.25 14.0711 9.92893 15.75 12 15.75C14.0711 15.75 15.75 14.0711 15.75 12C15.75 9.92893 14.0711 8.25 12 8.25Z" fill="#1C274C"></path> </g></svg>
+                  <span class="quantity" style="font-size: small;"><span id="temperature"></span>computer vision</span>
+                <span class="text text--1"> use </span>
+              </div>
+              </a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#verticalycentered3">
+              <div class="item item--2">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 11L6 13" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9 9L9 15" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M15 9L15 15" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M18 11L18 13" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 11L12 13" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>    <span class="quantity" style="font-size: small;"> voice assistance </span>
+                <span class="text text--2"> use  </span>
+              </div>
+              </a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#verticalycentered">
+              <div class="item item--3">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.5" d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z" fill="#1C274C"></path> <path d="M9.95197 6.25001C9.52212 6.24994 9.12024 6.24987 8.79192 6.29892C8.42103 6.35433 8.04 6.48531 7.73543 6.82372C7.44103 7.15083 7.3371 7.54062 7.29205 7.91295C7.24993 8.26097 7.24997 8.69239 7.25 9.17955L7.25 9.22223C7.25 9.63645 7.58579 9.97223 8 9.97223C8.41422 9.97223 8.75 9.63645 8.75 9.22223C8.75 8.67932 8.7513 8.34012 8.78118 8.09314C8.79521 7.97726 8.81273 7.91049 8.8269 7.87222C8.83886 7.83994 8.8474 7.83047 8.85023 7.82732L8.85104 7.82638C8.85241 7.82474 8.85341 7.82354 8.86242 7.81941C8.87905 7.81181 8.92169 7.79618 9.01354 7.78246C9.21765 7.75197 9.50512 7.75001 10 7.75001H11.25V9.50001C11.25 9.91422 11.5858 10.25 12 10.25C12.4142 10.25 12.75 9.91422 12.75 9.50001V7.75001H14C14.4949 7.75001 14.7824 7.75197 14.9865 7.78246C15.0783 7.79618 15.121 7.81181 15.1376 7.81941C15.1466 7.82354 15.1476 7.82474 15.149 7.82638L15.1496 7.82717C15.1525 7.83032 15.1612 7.83994 15.1731 7.87222C15.1873 7.91049 15.2048 7.97726 15.2188 8.09314C15.2487 8.34012 15.25 8.67932 15.25 9.22223C15.25 9.63645 15.5858 9.97223 16 9.97223C16.4142 9.97223 16.75 9.63645 16.75 9.22223L16.75 9.17954V9.17953C16.75 8.69239 16.7501 8.26096 16.708 7.91295C16.6629 7.54062 16.559 7.15083 16.2646 6.82372C15.96 6.48531 15.579 6.35433 15.2081 6.29892C14.8798 6.24987 14.4779 6.24994 14.048 6.25001H9.95197Z" fill="#1C274C"></path> <path d="M8 11.25C7.58579 11.25 7.25 11.5858 7.25 12C7.25 12.4142 7.58579 12.75 8 12.75H16C16.4142 12.75 16.75 12.4142 16.75 12C16.75 11.5858 16.4142 11.25 16 11.25H8Z" fill="#1C274C"></path> <path d="M12.75 14.5C12.75 14.0858 12.4142 13.75 12 13.75C11.5858 13.75 11.25 14.0858 11.25 14.5V16.25H9.5C9.08579 16.25 8.75 16.5858 8.75 17C8.75 17.4142 9.08579 17.75 9.5 17.75H14.5C14.9142 17.75 15.25 17.4142 15.25 17C15.25 16.5858 14.9142 16.25 14.5 16.25H12.75V14.5Z" fill="#1C274C"></path> </g></svg><span class="quantity" style="font-size: small;"><span id="water-intake"></span> text recognition </span>
+                <span class="text text--3"> use </span>
+              </div>
+              </a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#verticalycentered4">
+              <div class="item item--4">
+            
+                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M10.5 10.5c.002 2.762-2.237 5-5 5s-5.002-2.238-5-5c-.002-2.76 2.237-5 5-5s5.002 2.24 5 5z" color="#000000" fill="#ff15a1" stroke="#373737" stroke-width=".49999682600000006"></path><path d="M8 1.401a4.998 4.998 0 0 0-2.488 9.334c-.004-.078-.012-.155-.012-.234a4.998 4.998 0 0 1 7.488-4.334A4.994 4.994 0 0 0 8 1.4z" fill="#1583ff"></path><path d="M10.5 5.5a4.998 4.998 0 0 0-5 5c0 .08.008.157.012.235A4.998 4.998 0 0 0 13 6.401c0-.079-.008-.156-.012-.234A4.975 4.975 0 0 0 10.5 5.5z" fill="#00cf2d"></path><path d="M12.988 6.167c.004.078.012.155.012.234a4.998 4.998 0 0 1-7.489 4.334 4.994 4.994 0 0 0 4.989 4.766 4.998 4.998 0 0 0 2.488-9.334z" fill="#f8ff15"></path><path d="M5.512 10.735a4.996 4.996 0 0 0 2.486 4.093 4.987 4.987 0 0 0 2.49-4.091A4.978 4.978 0 0 1 8 11.4a4.975 4.975 0 0 1-2.488-.666z" fill="#ef0000"></path><path d="M7.998 6.173A4.991 4.991 0 0 0 5.5 10.5c0 .079.008.156.012.234a4.978 4.978 0 0 0 4.977.002c.003-.079.011-.157.011-.236a4.99 4.99 0 0 0-2.502-4.328z" fill="#383027"></path><path d="M5.5 5.5c-.91 0-1.76.247-2.494.67a4.99 4.99 0 0 0 2.506 4.564c-.004-.077-.012-.154-.012-.233a4.991 4.991 0 0 1 2.498-4.328A4.975 4.975 0 0 0 5.5 5.5z" fill="#5100cc"></path><path d="M8 1.401a4.998 4.998 0 0 0-4.994 4.77 4.998 4.998 0 1 0 4.992 8.658 4.998 4.998 0 1 0 4.99-8.662A4.994 4.994 0 0 0 8 1.4z" fill="none" stroke="#373737" stroke-width=".9999936520000001"></path></g></svg>  <span class="quantity" style="font-size: small;"><span id="water-intake"></span> color recognition </span>
+                <span class="text text--3"> use </span>
+              </div>
+              </a>
+            </div>
+            <br>
+            <div class="modal fade" id="verticalycentered3" tabindex="-1">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="" style="font-weight: bold; font-family: Poppins;">voice assistance</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    
+                    <center>
+                      <div class="loading">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      </center>
+                      <button id="start">
+                      start recognition
+                      </button>
+                      <div id="result"></div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                   
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Vertically centered Modal-->
+<style>
+  button {
+  width: 100%;
+  height: 60px;
+  border: 3px solid #315cfd;
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: white;
+  font-size: 1.2em;
+  font-weight: 550;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button:hover {
+  background: #315cfd;
+  color: white;
+  font-size: 1.5em;
+}
+</style>
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                  const startButton = document.getElementById('start');
+                  const stopButton = document.getElementById('stop');
+                  const result = document.getElementById('result');
+                  const footer = document.getElementById('footer');
+                  let recognition;
+                  let isListening = false;
+      
+                  if (window.SpeechRecognition || window.webkitSpeechRecognition) {
+                      recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+                  } else {
+                      alert('Your browser does not support Speech Recognition.');
+                      return;
+                  }
+      
+                  recognition.continuous = true;
+                  recognition.interimResults = false;
+      
+                  recognition.onstart = () => {
+                      console.log('Voice recognition started. Try speaking into the microphone.');
+                      isListening = true;
+                  };
+      
+                  recognition.onresult = async (event) => {
+                      const speechToText = event.results[event.resultIndex][0].transcript.toLowerCase();
+                      result.textContent = speechToText;
+                      console.log('Result: ', speechToText);
+      
+                      if (speechToText === 'activate computer vision') {
+                        openModal('#verticalycentered2');
+                      } else if (speechToText === 'computer vision') {
+                          openModal('#verticalycentered2');
+                      } else if (speechToText === 'text') {
+                        openModal('#verticalycentered');
+                      } else if (speechToText.includes('what\'s the weather today')) {
+                          const weatherData = await getWeatherData('Lilongwe');
+                          speak(weatherData);
+                      }
+                  };
+      
+                  recognition.onerror = (event) => {
+                      console.error('Error occurred in recognition: ', event.error);
+                  };
+      
+                  recognition.onend = () => {
+                      if (isListening) {
+                          recognition.start();
+                      } else {
+                          console.log('Voice recognition stopped.');
+                      }
+                  };
+      
+                  startButton.addEventListener('click', () => {
+                      if (!isListening) {
+                          recognition.start();
+                      }
+                  });
+      
+                  stopButton.addEventListener('click', () => {
+                      isListening = false;
+                      recognition.stop();
+                  });
+      
+                  function scrollToFooter() {
+                      footer.scrollIntoView({ behavior: 'smooth' });
+                      speak('Voice recognition activated.');
+                  }
+      
+                  function speak(text) {
+                      const utterance = new SpeechSynthesisUtterance(text);
+                      window.speechSynthesis.speak(utterance);
+                  }
+      
+                  function openModal(modalId) {
+                      const modal = new bootstrap.Modal(document.querySelector(modalId));
+                      modal.show();
+                  }
+      
+                  async function getWeatherData(city) {
+                      const apiKey = '547afd6a9ad38bd23e255e28e1a2bf49';  // Replace with your OpenWeather API key
+                      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+                      try {
+                          const response = await fetch(url);
+                          const data = await response.json();
+                          const description = data.weather[0].description;
+                          const temperature = data.main.temp;
+                          const humidity = data.main.humidity;
+                          
+                          const tempMin = data.main.temp_min;
+                          const tempMax = data.main.temp_max;
+                          const weatherInfo = `
+                              Hi im vision AID! The weather in ${city} is currently ${description}. 
+                              The temperature is ${temperature}°C with a high of ${tempMax}°C and a low of ${tempMin}°C. 
+                              The humidity is ${humidity}% thank you!
+                          `;
+                          return weatherInfo;
+                      } catch (error) {
+                          console.error('Error fetching weather data:', error);
+                          return 'Sorry, I could not retrieve the weather data.';
+                      }
+                  }
+              });
+          </script>
+        
+
+
+
+            <div class="modal fade" id="verticalycentered" tabindex="-1">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="" style="font-weight: bold; font-family: Poppins;">text recognition</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    
+                    <form method="post" enctype="multipart/form-data" style="margin-top: 20px;">
+                      {% csrf_token %}
+                      {{ form.as_p }}
+                      <button type="submit" style="color: red; font-weight: bold; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px; margin-bottom: 10%; margin-left: 5%; margin-right: 10%;">Analyze image</button>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                   
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Vertically centered Modal-->
+
+            <div class="modal fade" id="verticalycentered4" tabindex="-1">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="" style="font-weight: bold; font-family: Poppins;">Color Recognition</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Color Recognition</title>
+                        <style>
+                            video, canvas {
+                                display: block;
+                                margin: 10px auto;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <video id="video" width="370" height="480" autoplay></video>
+                        <canvas id="canvas" width="640" height="480" style="display: none;"></canvas>
+                        <div id="colorDisplay"></div>
+                        <script>
+                            const video = document.getElementById('video');
+                            const canvas = document.getElementById('canvas');
+                            const colorDisplay = document.getElementById('colorDisplay');
+                            const ctx = canvas.getContext('2d');
+                    
+                            navigator.mediaDevices.getUserMedia({ video: true })
+                                .then(stream => {
+                                    video.srcObject = stream;
+                                    video.play();
+                                    requestAnimationFrame(processFrame);
+                                })
+                                .catch(err => {
+                                    console.error("Error accessing camera: " + err);
+                                });
+                    
+                            function processFrame() {
+                                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                                const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                                const data = imageData.data;
+                                const color = getDominantColor(data);
+                                displayColor(color);
+                                requestAnimationFrame(processFrame);
+                            }
+                    
+                            function getDominantColor(data) {
+                                const colorCount = {};
+                                let maxCount = 0;
+                                let dominantColor = '';
+                    
+                                for (let i = 0; i < data.length; i += 4) {
+                                    const r = data[i];
+                                    const g = data[i + 1];
+                                    const b = data[i + 2];
+                                    const color = `rgb(${r},${g},${b})`;
+                    
+                                    if (!colorCount[color]) {
+                                        colorCount[color] = 0;
+                                    }
+                                    colorCount[color]++;
+                    
+                                    if (colorCount[color] > maxCount) {
+                                        maxCount = colorCount[color];
+                                        dominantColor = color;
+                                    }
+                                }
+                                return dominantColor;
+                            }
+                    
+                            function displayColor(color) {
+                                colorDisplay.style.backgroundColor = color;
+                                colorDisplay.innerText = `Dominant Color: ${color}`;
+                                colorDisplay.style.color = getTextColor(color);
+                            }
+                    
+                            function getTextColor(rgb) {
+                                const match = rgb.match(/(\d+), (\d+), (\d+)/);
+                                if (!match) return '#000';
+                                const r = parseInt(match[1]);
+                                const g = parseInt(match[2]);
+                                const b = parseInt(match[3]);
+                                const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+                                return brightness > 125 ? '#000' : '#fff';
+                            }
+                        </script>
+                    </body>
+                    </html>
+                    
+
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                   
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Vertically centered Modal-->
+
+            
+
+
+
+
+
+            <div class="modal fade" id="verticalycentered2" tabindex="-1">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="" style="font-weight: bold; font-family: Poppins;">computer vision</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+ 
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <title>Real-Time Object Detection for Blind Users</title>
+                        <style>
+                            canvas {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
+
+                            .loading {
+ --speed-of-animation: 0.9s;
+ --gap: 6px;
+ --first-color: #4c86f9;
+ --second-color: #49a84c;
+ --third-color: #f6bb02;
+ --fourth-color: #f6bb02;
+ --fifth-color: #2196f3;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100px;
+ gap: 6px;
+ height: 100px;
+}
+
+
+.loading span {
+ width: 4px;
+ height: 50px;
+ background: var(--first-color);
+ animation: scale var(--speed-of-animation) ease-in-out infinite;
+}
+
+.loading span:nth-child(2) {
+ background: var(--second-color);
+ animation-delay: -0.8s;
+}
+
+.loading span:nth-child(3) {
+ background: var(--third-color);
+ animation-delay: -0.7s;
+}
+
+.loading span:nth-child(4) {
+ background: var(--fourth-color);
+ animation-delay: -0.6s;
+}
+
+.loading span:nth-child(5) {
+ background: var(--fifth-color);
+ animation-delay: -0.5s;
+}
+
+@keyframes scale {
+ 0%, 40%, 100% {
+  transform: scaleY(0.05);
+ }
+
+ 20% {
+  transform: scaleY(1);
+ }
+}
+
+
+                        </style>
+                    </head>
+                    <body>
+                      <center>
+                      <div class="loading">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      </center>
+
+                        <video id="video" width="370" height="480" autoplay style="display:none;"></video>
+                        <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+                        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+                        <script>
+                            const video = document.getElementById('video');
+                            const canvas = document.getElementById('canvas');
+                            const context = canvas.getContext('2d');
+                            let model;
+                            let isDetecting = false;
+                            let recognition;
+                    
+                            // Load the COCO-SSD model
+                            cocoSsd.load().then((loadedModel) => {
+                                model = loadedModel;
+                                console.log('Model loaded.');
+                                startVoiceRecognition();
+                            });
+                    
+                            // Automatically request camera and microphone permissions
+                            async function requestPermissions() {
+                                try {
+                                    const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+                                    stream.getTracks().forEach(track => track.stop()); // Stop the tracks as we only need permissions
+                                    console.log('Permissions granted.');
+                                } catch (error) {
+                                    console.error('Error accessing media devices:', error);
+                                    alert('Could not access the camera or microphone. Make sure you have given permission and your devices are working.');
+                                }
+                            }
+                    
+                            // Initialize voice recognition
+                            function startVoiceRecognition() {
+                                if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+                                    recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+                                    recognition.continuous = true;
+                                    recognition.interimResults = false;
+                    
+                                    recognition.onresult = (event) => {
+                                        const transcript = event.results[event.resultIndex][0].transcript.trim().toLowerCase();
+                                        console.log('Recognized text:', transcript);
+                    
+                                        if (transcript === 'start detection') {
+                                            startVideo();
+                                        } else if (transcript === 'stop detection') {
+                                            stopDetection();
+                                        }
+                                    };
+                    
+                                    recognition.onerror = (event) => {
+                                        console.error('Speech recognition error:', event.error);
+                                    };
+                    
+                                    recognition.start();
+                                    console.log('Voice control started.');
+                                } else {
+                                    alert('Speech recognition not supported in this browser.');
+                                }
+                            }
+                    
+                            function startVideo() {
+                                if (!isDetecting) {
+                                    navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
+                                        video.srcObject = stream;
+                                        video.style.display = 'block';
+                                        canvas.style.display = 'block';
+                                        video.addEventListener('loadeddata', () => {
+                                            isDetecting = true;
+                                            detectObjects();
+                                        });
+                                    }).catch((error) => {
+                                        console.error('Error accessing the camera:', error);
+                                        alert('Could not access the camera. Make sure you have given permission and your camera is working.');
+                                    });
+                                }
+                            }
+                    
+                            function stopDetection() {
+                                if (isDetecting) {
+                                    const stream = video.srcObject;
+                                    const tracks = stream.getTracks();
+                    
+                                    tracks.forEach((track) => {
+                                        track.stop();
+                                    });
+                    
+                                    video.srcObject = null;
+                                    video.style.display = 'none';
+                                    canvas.style.display = 'none';
+                                    isDetecting = false;
+                                    context.clearRect(0, 0, canvas.width, canvas.height);
+                                }
+                            }
+                    
+                            function detectObjects() {
+                                if (isDetecting) {
+                                    model.detect(video).then((predictions) => {
+                                        context.clearRect(0, 0, canvas.width, canvas.height);
+                                        predictions.forEach((prediction) => {
+                                            if (prediction.score > 0.5) {
+                                                const [x, y, width, height] = prediction.bbox;
+                                                context.strokeStyle = 'red';
+                                                context.lineWidth = 2;
+                                                context.strokeRect(x, y, width, height);
+                                                context.font = '18px Arial';
+                                                context.fillStyle = 'red';
+                                                context.fillText(prediction.class, x, y > 10 ? y - 5 : 10);
+                                                beepAndSpeak(prediction.class);
+                                            }
+                                        });
+                                        requestAnimationFrame(detectObjects);
+                                    });
+                                }
+                            }
+                    
+                            function beepAndSpeak(text) {
+                                // Beep sound
+                                const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                                const oscillator = audioCtx.createOscillator();
+                                oscillator.type = 'sine';
+                                oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // A4 note
+                                oscillator.connect(audioCtx.destination);
+                                oscillator.start();
+                                oscillator.stop(audioCtx.currentTime + 0.1); // Beep for 0.1 seconds
+                    
+                                // Text to speech
+                                const utterance = new SpeechSynthesisUtterance(text);
+                                speechSynthesis.speak(utterance);
+                            }
+                    
+                            // Request permissions on load
+                            window.onload = requestPermissions;
+                        </script>
+                    </body>
+                    </html>
+                    
+                    
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                   
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Vertically centered Modal-->
+           
+            {% if image %}
+            <h2 style="font-family: Poppins; font-weight: bold; color: palevioletred;">output</h2>
+            <div class="box">
+            <img src="{{ image.image.url }}" alt="Uploaded image" style="max-width: 100%;">
+            <pre>{{ text }}</pre>
+            </div>
+            {% else %}
+            <br>
+            <h2 style="font-family: Poppins; font-weight: bold; color: palevioletred; margin-top: 10px;">vision aid utilities</h2>
+            <p>Vision aid utilities for the visually impaired include screen readers, magnification software, OCR tools, voice assistants, wearable tech, navigation apps, and braille displays, enhancing independence and quality of life.</p>
+            <div class="radio-input">
+              <input value="value-1" name="value-radio" id="value-1" type="radio" />
+              <label for="value-1">
+                <div class="text">
+                  <span class="circle"></span>
+                 navigation
+                </div>
+                <div class="price">
+                  <span>voice assistance</span>
+                  <span class="small">included</span>
+                </div> </label
+              >
+            </div>
+            
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Digital Compass</title>
+                <style>
+                    #compass {
+                        width: 200px;
+                        height: 200px;
+                        border: 2px solid black;
+                        border-radius: 50%;
+                        position: relative;
+                    }
+                    #arrow {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 2px;
+                        height: 100px;
+                        background-color: red;
+                        transform-origin: 50% 100%;
+                        transition: transform 0.1s ease-in-out;
+                    }
+                    #directionText {
+                        position: absolute;
+                        top: 10px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        text-align: center;
+                        font-size: 18px;
+                    }
+                    .direction-label {
+                        position: absolute;
+                        font-size: 12px;
+                    }
+                    .north {
+                        top: 5px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    .east {
+                        top: 50%;
+                        left: calc(100% - 10px);
+                        transform: translateY(-50%);
+                    }
+                    .south {
+                        bottom: 5px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    .west {
+                        top: 50%;
+                        left: 10px;
+                        transform: translateY(-50%);
+                    }
+                </style>
+            </head>
+            <body>
+              <center>
+                <div id="compass">
+                    <div id="arrow"></div>
+                    <div id="directionText"></div>
+                    <div class="direction-label north">N</div>
+                    <div class="direction-label east">E</div>
+                    <div class="direction-label south">S</div>
+                    <div class="direction-label west">W</div>
+                </div>
+              </center>
+              <div class="radio-input">
+                <input value="value-2" name="value-radio" id="value-2" type="radio" />
+              <label for="value-2">
+                
+                <span class="info">achive</span>
+              </label>
+              </div>
+                <script>
+                    window.addEventListener('DOMContentLoaded', () => {
+                        if (window.DeviceOrientationEvent) {
+                            window.addEventListener('deviceorientation', handleOrientation);
+                        } else {
+                            alert("Device orientation not supported.");
+                        }
+                    });
+            
+                    function handleOrientation(event) {
+                        let alpha = event.alpha; // compass direction in degrees
+            
+                        if (typeof event.webkitCompassHeading !== "undefined") {
+                            alpha = event.webkitCompassHeading; // use webkit-compass if available
+                        }
+            
+                        if (alpha !== null) {
+                            const arrow = document.getElementById('arrow');
+                            arrow.style.transform = `rotate(${-alpha}deg)`;
+            
+                            const directionText = document.getElementById('directionText');
+                            const direction = getDirectionName(alpha);
+                            directionText.innerText = direction;
+            
+                            // Speak the direction using text-to-speech
+                            speak(direction);
+                        }
+                    }
+            
+                    function getDirectionName(alpha) {
+                        // Determine the cardinal direction based on the alpha value
+                        if (alpha >= 315 || alpha < 45) {
+                            return "North";
+                        } else if (alpha >= 45 && alpha < 135) {
+                            return "East";
+                        } else if (alpha >= 135 && alpha < 225) {
+                            return "South";
+                        } else if (alpha >= 225 && alpha < 315) {
+                            return "West";
+                        } else {
+                            return "Unknown";
+                        }
+                    }
+            
+                    function speak(message) {
+                        const speech = new SpeechSynthesisUtterance();
+                        speech.lang = "en-US";
+                        speech.text = message;
+                        speech.volume = 1; // 0 to 1
+                        speech.rate = 1; // 0.1 to 10
+                        speech.pitch = 1; // 0 to 2
+                        window.speechSynthesis.speak(speech);
+                    }
+                </script>
+            </body>
+            </html>
+            
+            {% endif %}
+		</div>
+	
+      <style>
+        .radio-input input {
+  display: none;
+ 
+}
+
+.radio-input label {
+  --border-color: #a1b0d8;
+
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  width: 100%;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+}
+
+.radio-input input:checked + label {
+  --border-color: #2f64d8;
+  border-color: var(--border-color);
+  border-width: 2px;
+}
+.radio-input label:hover {
+  --border-color: #2f64d8;
+  border-color: var(--border-color);
+}
+
+.radio-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(189, 187, 207);
+  margin-right: 0.5rem;
+  position: relative;
+}
+
+.radio-input input:checked + label span.circle::before {
+  content: "";
+  display: inline;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2f64d8;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.text {
+  display: flex;
+  align-items: center;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-weight: bold;
+}
+
+.small {
+  font-size: 10px;
+  color: rgb(136, 138, 139);
+  font-weight: 100;
+}
+
+.info {
+  position: absolute;
+  display: inline-block;
+  font-size: 11px;
+  background-color: rgb(31, 236, 123);
+  border-radius: 20px;
+  padding: 1px 9px;
+  top: 0;
+  transform: translateY(-50%);
+  right: 5px;
+}
+
+        .socket {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  top: 80%;
+  margin-top: -100px;
+}
+
+.hex-brick {
+  background: #000000;
+  width: 30px;
+  height: 17px;
+  position: absolute;
+  top: 5px;
+  animation-name: fade00;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: fade00;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.h2 {
+  transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+}
+
+.h3 {
+  transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+}
+
+.gel {
+  height: 30px;
+  width: 30px;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.center-gel {
+  margin-left: -15px;
+  margin-top: -15px;
+  animation-name: pulse00;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: pulse00;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.c1 {
+  margin-left: -47px;
+  margin-top: -15px;
+}
+
+.c2 {
+  margin-left: -31px;
+  margin-top: -43px;
+}
+
+.c3 {
+  margin-left: 1px;
+  margin-top: -43px;
+}
+
+.c4 {
+  margin-left: 17px;
+  margin-top: -15px;
+}
+
+.c5 {
+  margin-left: -31px;
+  margin-top: 13px;
+}
+
+.c6 {
+  margin-left: 1px;
+  margin-top: 13px;
+}
+
+.c7 {
+  margin-left: -63px;
+  margin-top: -43px;
+}
+
+.c8 {
+  margin-left: 33px;
+  margin-top: -43px;
+}
+
+.c9 {
+  margin-left: -15px;
+  margin-top: 41px;
+}
+
+.c10 {
+  margin-left: -63px;
+  margin-top: 13px;
+}
+
+.c11 {
+  margin-left: 33px;
+  margin-top: 13px;
+}
+
+.c12 {
+  margin-left: -15px;
+  margin-top: -71px;
+}
+
+.c13 {
+  margin-left: -47px;
+  margin-top: -71px;
+}
+
+.c14 {
+  margin-left: 17px;
+  margin-top: -71px;
+}
+
+.c15 {
+  margin-left: -47px;
+  margin-top: 41px;
+}
+
+.c16 {
+  margin-left: 17px;
+  margin-top: 41px;
+}
+
+.c17 {
+  margin-left: -79px;
+  margin-top: -15px;
+}
+
+.c18 {
+  margin-left: 49px;
+  margin-top: -15px;
+}
+
+.c19 {
+  margin-left: -63px;
+  margin-top: -99px;
+}
+
+.c20 {
+  margin-left: 33px;
+  margin-top: -99px;
+}
+
+.c21 {
+  margin-left: 1px;
+  margin-top: -99px;
+}
+
+.c22 {
+  margin-left: -31px;
+  margin-top: -99px;
+}
+
+.c23 {
+  margin-left: -63px;
+  margin-top: 69px;
+}
+
+.c24 {
+  margin-left: 33px;
+  margin-top: 69px;
+}
+
+.c25 {
+  margin-left: 1px;
+  margin-top: 69px;
+}
+
+.c26 {
+  margin-left: -31px;
+  margin-top: 69px;
+}
+
+.c27 {
+  margin-left: -79px;
+  margin-top: -15px;
+}
+
+.c28 {
+  margin-left: -95px;
+  margin-top: -43px;
+}
+
+.c29 {
+  margin-left: -95px;
+  margin-top: 13px;
+}
+
+.c30 {
+  margin-left: 49px;
+  margin-top: 41px;
+}
+
+.c31 {
+  margin-left: -79px;
+  margin-top: -71px;
+}
+
+.c32 {
+  margin-left: -111px;
+  margin-top: -15px;
+}
+
+.c33 {
+  margin-left: 65px;
+  margin-top: -43px;
+}
+
+.c34 {
+  margin-left: 65px;
+  margin-top: 13px;
+}
+
+.c35 {
+  margin-left: -79px;
+  margin-top: 41px;
+}
+
+.c36 {
+  margin-left: 49px;
+  margin-top: -71px;
+}
+
+.c37 {
+  margin-left: 81px;
+  margin-top: -15px;
+}
+
+.r1 {
+  animation-name: pulse00;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: .2s;
+  -webkit-animation-name: pulse00;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: .2s;
+}
+
+.r2 {
+  animation-name: pulse00;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: .4s;
+  -webkit-animation-name: pulse00;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: .4s;
+}
+
+.r3 {
+  animation-name: pulse00;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: .6s;
+  -webkit-animation-name: pulse00;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: .6s;
+}
+
+.r1 > .hex-brick {
+  animation-name: fade00;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: .2s;
+  -webkit-animation-name: fade00;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: .2s;
+}
+
+.r2 > .hex-brick {
+  animation-name: fade00;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: .4s;
+  -webkit-animation-name: fade00;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: .4s;
+}
+
+.r3 > .hex-brick {
+  animation-name: fade00;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: .6s;
+  -webkit-animation-name: fade00;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: .6s;
+}
+
+@keyframes pulse00 {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.01);
+    transform: scale(0.01);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes fade00 {
+  0% {
+    background: #252525;
+  }
+
+  50% {
+    background: #000000;
+  }
+
+  100% {
+    background: #353535;
+  }
+}
+
+        .button {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background: linear-gradient(30deg, rgb(255, 130, 0) 20%, rgb(255, 38, 0) 80%);
+  transition: all 0.3s ease-in-out 0s;
+  box-shadow: rgba(193, 244, 246, 0.698) 0px 0px 0px 0px;
+  animation: 1.2s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal none running pulse;
+  align-items: center;
+  border: 0;
+}
+
+.button:is(:hover, :focus) {
+  transform: scale(1.2);
+}
+
+@keyframes pulse {
+  100% {
+    box-shadow: 0 0 0 45px rgba(193,244,246,0);
+  }
+}
+
+
+
+         
+          .card_c {
+        width: 100%;
+        height: 254px;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 5px;
+        overflow: visible;
+      }
+      
+      .card_c .item {
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      
+      
+      .item svg {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 7px;
+      }
+      
+      .item--1 {
+        background: #c7c7ff;
+      }
+      
+      .item--2 {
+        background: #ffd8be;
+      }
+      
+      .item--3 {
+        background: #a9ecbf;
+      }
+      
+      .item--4 {
+        background: #f3bbe1;
+      }
+      
+      .quantity {
+        font-size: 25px;
+        font-weight: 600;
+      }
+      
+      .text {
+        font-size: 12px;
+        font-family: inherit;
+        font-weight: 600;
+      }
+      
+      .text--1 {
+        color: rgba(149,149,255,1);
+      }
+      
+      .text--2 {
+        color: rgba(252,161,71,1);
+      }
+      
+      .text--3 {
+        color: rgba(66,193,110,1);
+      }
+      
+      .text--4 {
+        color: rgba(220,91,183,1);
+      }
+      </style>
+  </main><!-- End #main -->
+
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="{% static 'vendor/apexcharts/apexcharts.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/chart.js/chart.umd.js' %}"></script>
+  <script src="{% static 'vendor/echarts/echarts.min.js' %}"></script>
+  <script src="{% static 'vendor/quill/quill.js' %}"></script>
+  <script src="{% static 'vendor/simple-datatables/simple-datatables.js' %}"></script>
+  <script src="{% static 'vendor/tinymce/tinymce.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+  
+
+</body>
+
+</html>
