@@ -68,63 +68,6 @@
           </a>
         </li><!-- End Search Icon-->
 
-        
-
-        <li class="nav-item dropdown pe-3">
-
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            
-          </a><!-- End Profile Iamge Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
-              <h6>Kevin Anderson</h6>
-              <span>Web Designer</span>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-person"></i>
-                <span>My Profile</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-gear"></i>
-                <span>Account Settings</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                <i class="bi bi-question-circle"></i>
-                <span>Need Help?</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
-                <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
-              </a>
-            </li>
-
-          </ul><!-- End Profile Dropdown Items -->
-        </li><!-- End Profile Nav -->
-
       </ul>
     </nav><!-- End Icons Navigation -->
 
@@ -136,7 +79,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="{% url 'homepage' %}">
           <i class="bi bi-grid"></i>
           <span style="color: palevioletred;">Dashboard</span>
         </a>
@@ -163,17 +106,123 @@
     <section class="section dashboard">
       <div class="row">
 
-        <!-- Left side columns -->
-        <div class="col-lg-8">
-          <div class="row">
-            {% if image %}
-            <div class="box">
-            <img src="{{ image.image.url }}" alt="Uploaded image" style="max-width: 100%;">
-            <pre>{{ text }}</pre>
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Real-Time Object Detection</title>
+            <style>
+                canvas {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Real-Time Object Detection</h1>
+            <video id="video" width="640" height="480" autoplay></video>
+            <canvas id="canvas" width="640" height="480"></canvas>
+            <div>
+                <button id="startButton">Start Detection</button>
+                <button id="stopButton">Stop Detection</button>
             </div>
-            {% else %}
-            <p>No image uploaded.</p>
-            {% endif %}
+            <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+            <script>
+                const video = document.getElementById('video');
+                const canvas = document.getElementById('canvas');
+                const context = canvas.getContext('2d');
+                let model;
+                let isDetecting = false;
+                let animationId;
+        
+                // Load the COCO-SSD model
+                cocoSsd.load().then((loadedModel) => {
+                    model = loadedModel;
+                    console.log('Model loaded.');
+                }).catch((error) => {
+                    console.error('Error loading the model:', error);
+                });
+        
+                document.getElementById('startButton').addEventListener('click', () => {
+                    startDetection();
+                });
+        
+                document.getElementById('stopButton').addEventListener('click', () => {
+                    stopDetection();
+                });
+        
+                function startDetection() {
+                    if (!model) {
+                        console.error('Model not loaded yet.');
+                        return;
+                    }
+                    if (isDetecting) {
+                        console.log('Detection is already running.');
+                        return;
+                    }
+                    isDetecting = true;
+                    animate();
+                }
+        
+                function stopDetection() {
+                    isDetecting = false;
+                    cancelAnimationFrame(animationId);
+                    context.clearRect(0, 0, canvas.width, canvas.height);
+                }
+        
+                function animate() {
+                    model.detect(video).then((predictions) => {
+                        context.clearRect(0, 0, canvas.width, canvas.height);
+                        predictions.forEach((prediction) => {
+                            if (prediction.score > 0.5) {
+                                const [x, y, width, height] = prediction.bbox;
+                                context.strokeStyle = 'red';
+                                context.lineWidth = 2;
+                                context.strokeRect(x, y, width, height);
+                                context.font = '18px Arial';
+                                context.fillStyle = 'red';
+                                context.fillText(prediction.class, x, y > 10 ? y - 5 : 10);
+                                beepAndSpeak(prediction.class);
+                            }
+                        });
+                        if (isDetecting) {
+                            animationId = requestAnimationFrame(animate);
+                        }
+                    });
+                }
+        
+                function beepAndSpeak(text) {
+                    // Beep sound
+                    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                    const oscillator = audioCtx.createOscillator();
+                    oscillator.type = 'sine';
+                    oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // A4 note
+                    oscillator.connect(audioCtx.destination);
+                    oscillator.start();
+                    oscillator.stop(audioCtx.currentTime + 0.1); // Beep for 0.1 seconds
+        
+                    // Text to speech
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    speechSynthesis.speak(utterance);
+                }
+        
+                // Start the video stream
+                navigator.mediaDevices.getUserMedia({
+                    video: true
+                }).then((stream) => {
+                    video.srcObject = stream;
+                    video.addEventListener('loadeddata', () => {
+                        console.log('Video loaded.');
+                    });
+                }).catch((error) => {
+                    console.error('Error accessing the camera:', error);
+                    alert('Could not access the camera. Make sure you have given permission and your camera is working.');
+                });
+            </script>
+        </body>
+        </html>
+        
 			
 		</div>
 	

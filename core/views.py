@@ -42,3 +42,7 @@ def output_text(request):
     imagedata= ImageData.objects.all()
     context = {'form': form, 'imagedata': imagedata}
     return render(request, 'output.html', context)
+
+
+def voice_asistance(request):
+    return render(request, 'computer_v.html')
